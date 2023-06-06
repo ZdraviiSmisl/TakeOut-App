@@ -1,8 +1,11 @@
+import React from "react";
+import MainHader from "./components/Haders/MainHader";
+
 function App() {
   return (
-    <div>
-      <h2>Let's get started!</h2>
-    </div>
+    <>
+      <MainHader />
+    </>
   );
 }
 

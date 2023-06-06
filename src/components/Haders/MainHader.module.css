@@ -1,0 +1,39 @@
+.header {
+  position: fixed;
+  top: 0;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 90px;
+  justify-content: space-around;
+  align-content: center;
+  width: 100%;
+  color: rgb(198, 196, 35);
+  background-color: #601e0a;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.header__title {
+  align-self: center;
+  margin: 0;
+  padding: 0;
+}
+
+.header__back {
+  min-height: 100vh;
+  background-image: url("../../assets/Meals.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  clip-path: polygon(0 0, 100% 0, 100% 50%, 0 68%);
+  z-index: 0;
+}
+
+.header__cart {
+  display: block;
+  padding: 5px;
+  align-self: center;
+  box-sizing: border-box;
+  background-color: aliceblue;
+}
