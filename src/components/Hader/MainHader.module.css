@@ -4,8 +4,9 @@
   display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: 90px;
-  justify-content: space-around;
+  justify-content: space-between;
   align-content: center;
+  padding: 0 100px;
   width: 100%;
   color: rgb(198, 196, 35);
   background-color: #601e0a;
