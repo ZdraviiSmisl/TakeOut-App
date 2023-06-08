@@ -1,0 +1,11 @@
+.meals__item {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  justify-content: space-between;
+  border-bottom: 1px solid gray;
+}
+
+.meals__input {
+  min-width: 50px;
+}
