@@ -5,17 +5,18 @@ import styles from "./MealsItem.module.css";
 const MealsItem = (props) => {
   return (
     <li>
-      <article className={styles["meals__item"]}>
-        <h3>{props.name}</h3>
-        <p>{props.description}</p>
-        <span>{props.price}</span>
+      <article className={styles["dish"]}>
+        <h3 className={styles["dish__title"]}>{props.name}</h3>
+        <p className={styles["dish__slogan"]}>{props.description}</p>
+        <span className={styles["dish__price"]}>{props.price}</span>
         <Input
-          classNames={styles["meals__input"]}
+          input={styles["dish__input-wrap"]}
+          classNames={styles["dish__input"]}
           label="Amount"
           HtmlFor={props.id}
           id={props.id}
         />
-        <Button>+Add</Button>
+        <Button className={styles["dish__add"]}>+Add</Button>
       </article>
     </li>
   );

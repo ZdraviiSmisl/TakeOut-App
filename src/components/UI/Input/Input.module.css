@@ -1,0 +1,9 @@
+.input__wrap {
+  box-sizing: border-box;
+}
+
+.input__label {
+  margin-right: 10px;
+  font-size: 16px;
+  font-weight: 700;
+}

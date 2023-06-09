@@ -11,7 +11,7 @@
   color: rgb(198, 196, 35);
   background-color: #601e0a;
   box-sizing: border-box;
-  z-index: 1;
+  z-index: 10;
 }
 
 .header__title {
