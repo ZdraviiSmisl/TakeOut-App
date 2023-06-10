@@ -3,21 +3,9 @@
   margin: 0;
   padding: 0;
   grid-template-columns: auto auto;
-  grid-template-rows: 70px auto auto;
+  grid-template-rows: auto auto;
   justify-content: space-between;
   border-bottom: 1px solid rgb(218, 210, 210);
-}
-
-.dish__input {
-  align-self: self-start;
-  padding: 3px 0;
-  width: 40px;
-  border: 1px solid rgb(184, 166, 166);
-  border-radius: 5px;
-}
-
-.dish__input-wrap {
-  grid-area: 1/2/2/3;
 }
 
 .dish__title {
@@ -30,7 +18,7 @@
 
 .dish__slogan {
   margin: 0;
-  padding: 25px 0 0 0;
+  padding: 27px 0 0 0;
   grid-area: 1/1/2/2;
   align-self: center;
   font-style: italic;
@@ -43,12 +31,4 @@
   font-weight: 700;
   font-size: 20px;
   color: #ad5502;
-}
-
-.dish__add {
-  transform: translateY(17px);
-  grid-area: 1/2/2/3;
-  align-self: center;
-  justify-self: self-end;
-  padding: 3px 35px;
 }
