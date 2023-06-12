@@ -7,7 +7,7 @@ const MainHader = (props) => {
     <Fragment>
       <header className={styles["header"]}>
         <h1 className={styles["header__title"]}>Best Meals</h1>
-        <CartButton />
+        <CartButton onOpen={props.onOpen} />
       </header>
       <div className={styles["header__back"]}></div>
     </Fragment>

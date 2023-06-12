@@ -4,7 +4,7 @@ import CartIcon from "./feature/CartImage";
 
 const CartButton = (props) => {
   return (
-    <button className={styles.button}>
+    <button className={styles.button} onClick={props.onOpen}>
       <span className={styles.icon}>
         <CartIcon />
       </span>
