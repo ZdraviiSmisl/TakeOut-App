@@ -1,8 +1,11 @@
 import styles from "./MealForm.module.css";
 import Input from "../../UI/Input/Input";
 import Button from "../../UI/Button/Button";
+import CartContext from "../../../store/CartContext";
+import { useContext } from "react";
 
 const MealForm = (props) => {
+  const context = useContext(CartContext);
   return (
     <form className={styles.form}>
       <Input
@@ -18,7 +21,9 @@ const MealForm = (props) => {
           defaultValue: 1,
         }}
       />
-      <Button extraStyles={styles["form__btn"]}>+Add</Button>
+      <Button extraStyles={styles["form__btn"]} onClick={context.addItem}>
+        +Add
+      </Button>
     </form>
   );
 };
