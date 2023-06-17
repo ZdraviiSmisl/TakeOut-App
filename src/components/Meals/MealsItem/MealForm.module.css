@@ -1,11 +1,13 @@
 .form {
-  display: flex;
-  flex-flow: column;
+  display: grid;
+  grid-template-columns: auto 0px;
+  grid-template-rows: repeat(3, auto);
   row-gap: 10px;
 }
 
 .form__input {
-  justify-self: center;
+  justify-self: self-end;
+  grid-row: 1/1;
   padding: 3px 0;
   width: 40px;
   text-align: center;
@@ -16,11 +18,22 @@
 
 .form__label {
   margin-right: 15px;
+  grid-row: 1/1;
+  justify-self: end;
+  width: 100px;
   font-size: 16px;
   font-weight: 700;
 }
 
 .form__btn {
-  align-self: center;
+  grid-row: 2/2;
+  align-self: self-end;
+  justify-self: self-end;
   padding: 3px 35px;
+}
+
+.form__valid {
+  margin: 0;
+  grid-row: 3/3;
+  color: red;
 }
