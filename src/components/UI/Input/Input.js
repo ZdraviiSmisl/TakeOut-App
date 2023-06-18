@@ -19,7 +19,7 @@ const Input = React.forwardRef((props, ref) => {
       <label className={props.labelStyles} htmlFor={props.input.id}>
         {props.label}
       </label>
-      <input {...props.input} className={props.classNames} ref={ref} />
+      <input {...props.input} className={`${props.classNames} `} ref={ref} />
     </>
   );
 });

@@ -22,7 +22,6 @@ const CartProvider = (props) => {
     items: defaultState.items,
     totalAmount: defaultState.totalAmount,
   });
-
   const addItemHandler = (item) => {
     dispatchCartState({ type: "ADD", item: item });
   };
