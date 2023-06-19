@@ -6,9 +6,11 @@ import CartItem from "./CartItem";
 
 const Cart = (props) => {
   const context = useContext(CartContext);
-  // const cartItmes = [
-  //   { id: "c1", name: "Sushi", amount: 2, price: "$16.50" },
-  // ].map((item) => <li key={item.id}>{item.name}</li>);
+  const hasItem = context.items.length > 0;
+  const totalAmount = `$${context.totalAmount.toFixed(2)}`;
+
+  const addItemHandler = (item) => {};
+  const removeItemHandler = (id) => {};
 
   const cartItems = context.items.map((item) => (
     <CartItem
@@ -17,6 +19,8 @@ const Cart = (props) => {
       name={item.name}
       price={item.price}
       amount={item.amount}
+      onAddItem={addItemHandler.bind(null, item)}
+      onRemoveItem={removeItemHandler.bind(null, item.id)}
     />
   ));
 
@@ -25,12 +29,12 @@ const Cart = (props) => {
       <ul className={styles["cart__items"]}>{cartItems}</ul>
       <div className={styles.total}>
         <span>Total Amount</span>
-        <span>{`$${context.totalAmount}`}</span>
+        <span>{totalAmount}</span>
       </div>
 
       <div className={styles.actions}>
         <button onClick={props.onClose}>Close</button>
-        <button>Order</button>
+        {hasItem && <button>Order</button>}
       </div>
     </Modal>
   );
