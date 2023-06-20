@@ -1,4 +1,3 @@
-import Button from "../UI/Button/Button";
 import styles from "./CartItem.module.css";
 
 const CartItem = (props) => {
@@ -14,8 +13,18 @@ const CartItem = (props) => {
           >{`x${props.amount}`}</span>
         </p>
         <div className={styles["cart-item__block"]}>
-          <button className={styles["cart-item__button"]}>+</button>
-          <button className={styles["cart-item__button"]}>-</button>
+          <button
+            className={styles["cart-item__button"]}
+            onClick={props.onAddItem}
+          >
+            +
+          </button>
+          <button
+            className={styles["cart-item__button"]}
+            onClick={props.onRemoveItem}
+          >
+            -
+          </button>
         </div>
       </article>
     </li>

@@ -36,6 +36,33 @@ const cartReducer = (state, action) => {
     };
   }
 
+  if (action.type === "REMOVE") {
+    const existingItemIndex = state.items.findIndex(
+      (item) => item.id === action.id
+    );
+    const existingItem = state.items[existingItemIndex];
+    const updateTotalAmount = state.totalAmount - existingItem.price;
+
+    let updateItems;
+    let updateItem;
+
+    if (existingItem.amount > 1) {
+      updateItem = {
+        ...existingItem,
+        amount: existingItem.amount - 1,
+      };
+      updateItems = [...state.items];
+      updateItems[existingItemIndex] = updateItem;
+    } else {
+      //In this case it will be reterned false and the array will get empty.That means there ara  no items in the cart
+      updateItems = state.items.filter((item) => item.id !== action.id);
+    }
+    return {
+      items: updateItems,
+      totalAmount: updateTotalAmount,
+    };
+  }
+
   return defaultState;
 };
 
