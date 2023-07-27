@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/TakeOut/static/css/main.091a3a15.css",
-    "main.js": "/TakeOut/static/js/main.f39ce987.js",
-    "static/media/Meals.jpg": "/TakeOut/static/media/Meals.6aa3ed13793cf7c5f0ca.jpg",
-    "index.html": "/TakeOut/index.html",
-    "main.091a3a15.css.map": "/TakeOut/static/css/main.091a3a15.css.map",
-    "main.f39ce987.js.map": "/TakeOut/static/js/main.f39ce987.js.map"
+    "main.css": "/TakeOut-App/static/css/main.3a8eae59.css",
+    "main.js": "/TakeOut-App/static/js/main.f39ce987.js",
+    "static/media/Meals.jpg": "/TakeOut-App/static/media/Meals.6aa3ed13793cf7c5f0ca.jpg",
+    "index.html": "/TakeOut-App/index.html",
+    "main.3a8eae59.css.map": "/TakeOut-App/static/css/main.3a8eae59.css.map",
+    "main.f39ce987.js.map": "/TakeOut-App/static/js/main.f39ce987.js.map"
   },
   "entrypoints": [
-    "static/css/main.091a3a15.css",
+    "static/css/main.3a8eae59.css",
     "static/js/main.f39ce987.js"
   ]
 }
