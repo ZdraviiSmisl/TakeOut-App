@@ -3,6 +3,7 @@ import Modal from "../UI/Modal/Modal";
 import CartContext from "../../store/CartContext";
 import { useContext } from "react";
 import CartItem from "./CartItem";
+import CheckOut from "./Checkout";
 
 const Cart = (props) => {
   const context = useContext(CartContext);
@@ -35,6 +36,7 @@ const Cart = (props) => {
         <span>Total Amount</span>
         <span>{totalAmount}</span>
       </div>
+      <CheckOut />
 
       <div className={styles.actions}>
         <button onClick={props.onClose}>Close</button>
