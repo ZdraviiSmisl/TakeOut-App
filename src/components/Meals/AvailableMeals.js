@@ -32,20 +32,18 @@ import { useCallback, useEffect, useState } from "react";
 
 const AvailableMeals = (props) => {
   const [fetchedMeals, setFetchedMeals] = useState([]);
+
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
   const fetchMeals = useCallback(async () => {
-    setError(null);
     setLoading(true);
     try {
       const response = await fetch(
         "https://http-requests-3bfcd-default-rtdb.firebaseio.com/meals.json"
       );
 
-      if (!response.ok) {
-        throw new Error();
-      }
+      if (!response.ok) throw new Error("Something went wrong!");
 
       const data = await response.json();
 
@@ -59,9 +57,13 @@ const AvailableMeals = (props) => {
           price: +data[key].price,
         });
       }
+
+      console.log(fetchedData);
+
       setFetchedMeals(fetchedData);
     } catch (error) {
       setError(error.message);
+      console.log(error);
     }
     setLoading(false);
   }, []);
@@ -85,11 +87,11 @@ const AvailableMeals = (props) => {
   }
 
   if (error) {
-    content = <p>{error}</p>;
+    content = <p className={styles.errorLoading}>{error}</p>;
   }
 
   if (loading) {
-    content = <p>...Loading content</p>;
+    content = <p className={styles["mealsLoading"]}>...Loading content</p>;
   }
 
   return (

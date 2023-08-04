@@ -1,7 +1,7 @@
 import useInput from "../hooks/use-input";
 import styles from "./Checkout.module.css";
 
-const CheckOut = () => {
+const CheckOut = (props) => {
   const {
     value: nameValue,
     isValid: isValidNameValue,
@@ -51,6 +51,13 @@ const CheckOut = () => {
     if (!nameValue && !streetValue && !postalCodeValue && !cityValue) {
       return;
     }
+
+    props.confirmForm({
+      name: nameValue,
+      street: streetValue,
+      postalCode: postalCodeValue,
+      city: cityValue,
+    });
 
     resetNameValue();
     resetStreetValue();
@@ -146,7 +153,13 @@ const CheckOut = () => {
         )}
       </div>
       <div className={styles["form-submit__btn-block"]}>
-        <button className={styles["form-submit__btn"]}>Cancel</button>
+        <button
+          type="button"
+          className={styles["form-submit__btn"]}
+          onClick={props.cancelOrder}
+        >
+          Cancel
+        </button>
         <button className={styles["form-submit__btn"]} disabled={!isValidForm}>
           Confirm
         </button>

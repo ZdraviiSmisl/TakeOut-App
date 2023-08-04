@@ -12,6 +12,18 @@
   padding: 20px;
 }
 
+.mealsLoading,
+.errorLoading {
+  text-align: center;
+  font-size: 20px;
+  line-height: 22px;
+  color: #601e0a;
+}
+
+.errorLoading {
+  color: red;
+}
+
 @keyframes meals-appear {
   from {
     opacity: 0;
